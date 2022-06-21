@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reversing String</title>
+</head>
+<style>
+    body{
+        background-color: aquamarine;
+        color: brown;
+        font-size: 45px;
+    }
+    
+</style>
+<body>
+    <center>
+    <h1>Reversing A String</h1>
+    String: <input type="text" id="revtext" placeholder="Enter a string" style="background-color:rgb(143, 196, 201) ;font-size: 25px;">
+    <p>Click the button to obtain reverse of the string you entered</p>
+    <button onclick="RevFunction()" style="background-color:rgb(78, 78, 58) ; font-size : 25px;   ">Reverse</button>
+    <p id="demo"></p>
+    <script>
+        function RevFunction(){
+            var x=document.getElementById("revtext").value;
+            document.getElementById('demo').innerHTML=x.split("").reverse().join("");
+        }
+    </script>
+    </center>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvenNumbers</title>
+    <style>
+        body{
+            background-color: rgb(214, 237, 70);
+            color: rgb(144, 82, 31);
+            font-size: 45px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    Enter Numbers : <input type="text" id="num" placeholder="Seperate with comas" style="background-color: rgb(243, 243, 159) ;font-size:40px">
+    <button onclick="even()" style="font-size: 25px; background-color:rgb(178, 145, 211)" >Odd Numbers</button>
+    <p id="demo">Odd elements are :</p>
+    <script>
+        var num=[];
+        function even(){
+            document.getElementById("demo").innerHTML='Odd elements are :';
+            let num=  (document.getElementById("num").value).split(",");
+            const even_no = num.filter((is_even));
+            var nums= num.concat(even_no).filter(item => !num.includes(item) || !even_no.includes(item));
+
+            document.getElementById("num").value='';
+            document.getElementById("demo").innerHTML += nums;
+
+
+        }
+        function is_even(i){            
+            return i%2 == 0;
+        }    
+
+        
+    </script>
+</body>
+</html>

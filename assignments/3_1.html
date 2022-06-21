@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LargestString</title>
+    <style>
+        body{
+            background-color: darkolivegreen;
+            color: rgb(38, 32, 27);
+            font-size: 45px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h1>Finding Largest String</h1>
+    Enter Strings : <input type="text" id="str" placeholder="Seperate strings with comas" style="background-color: rgb(243, 243, 159) ;font-size:40px">
+    <button onclick="largestString()" style="font-size: 25px; background-color:greenyellow" >Done</button>
+    <p>Largest String in The given inputs is: </p>
+    <p id="demo"></p>
+    <script>
+      var arr=[];
+      function largestString(){
+      let arr=  (document.getElementById("str").value).split(",")
+      const lengthOfString = arr.map(item => item.length);
+      const max_length = Math.max(...lengthOfString);  
+      document.getElementById('demo').innerHTML=arr.find(item => item.length === max_length);
+    }
+      
+    </script>
+</center>
+</body>
+</html>

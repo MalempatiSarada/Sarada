@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SortingArray</title>
+</head>
+<style>
+    body{
+        background-color: bisque;
+        font-size: 45px;
+        color:darkmagenta;
+    }
+</style>
+<body>
+    <center>
+        <h1>Sorting An Array</h1>
+    
+    Enter Numbers:<input type="number" id="a" style="font-size: 30px;background-color: darkgray;">
+    <button onclick="add()" style="background-color: rgb(238, 238, 171);font-size: 25px">Display Array</button>
+
+    <p id="b">Array : </p>
+    <button onclick="sorting()" style="background-color: rgb(238, 238, 171);font-size: 25px">Sort Array</button>
+    <p id="s">Sorted Array : </p>
+    <script>
+        var i=0;
+        var na = Array();
+        var sa= Array();
+        function add(){
+            document.getElementById("b").innerHTML='Array :';
+            na[i] = document.getElementById("a").value;
+            i++;
+            document.getElementById("a").value='';
+            document.getElementById("b").innerHTML += na;
+            
+        }
+        function comparision(a,b){
+            return (a-b);
+        }
+        function sorting(){
+            document.getElementById("s").innerHTML='Sorted Array :';
+            na[i] = document.getElementById("a").value;
+            i++;
+            sa = na.sort(comparision);
+            document.getElementById("s").innerHTML += sa;
+        }
+    </script>
+    </center>
+</body>
+</html>

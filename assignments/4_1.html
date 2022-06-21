@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle</title>
+    <style>
+    body{
+        background-color: aquamarine;
+        color: brown;
+        font-size: 45px;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+
+    <script>
+        var a=parseInt(prompt("Enter height of rectangle: "));
+        var b=parseInt(prompt("Enter width of rectangle: "));
+        
+        var rect= new Rectangle(a,b);
+        document.writeln("Area is :");
+        document.writeln(rect.area());
+        document.write("perimeter is: ");
+        document.write(rect.perimeter());
+        function Rectangle(height,width){
+            this.h = height;
+            this.w = width;
+            this.area=function(){return this.w*this.h;};
+            this.perimeter = function(){ return 2*(this.h + this.w);};
+        }
+            
+        
+        
+    </script>
+</body>
+</html>

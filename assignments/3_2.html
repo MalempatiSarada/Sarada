@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SumOfSquares</title>
+    <style>
+        body{
+            background-color: rgb(147, 213, 32);
+            color: rgb(176, 102, 41);
+            font-size: 45px;
+        }
+    </style>
+</head>
+<body><center>
+    Enter Numbers : <input type="text" id="num" placeholder="Seperate with comas" style="background-color: rgb(243, 243, 159) ;font-size:40px">
+    <button onclick="squareSum()" style="font-size: 25px; background-color:rgb(178, 145, 211)" >Square Sum</button>
+    <p>Sum of squares of elements is  </p>
+    <p id="demo"></p>
+    <script>
+        var arr=[];
+        function squareSum(){
+            let num=  (document.getElementById("num").value).split(",");
+            const sq =num.map(function(x){return x*x;});
+            const sum=sq.reduce(function(z,y){return z+y;},0);
+            document.getElementById('demo').innerHTML=sum;
+
+            
+        }
+    </script>
+    </center>
+</body>
+</html>

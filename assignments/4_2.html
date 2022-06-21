@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distance</title>
+    <style>
+    body{
+        background-color: aquamarine;
+        color: brown;
+        font-size: 45px;
+        text-align: center;
+        padding-top: 200px;
+    }
+    </style>
+</head>
+<body>
+    <script>
+        var a=[];
+        var b=[];
+        a = prompt("Enter first point").split(",");
+        b = prompt("Enter second point").split(",");
+        var p = new Point(a,b);
+        document.writeln("The distance between 2 points is :  ");
+        document.writeln(p.distance());
+
+        function Point(p,q){
+            this.a = p;
+            this.b = q;
+            this.distance= function(){return (Math.sqrt((this.a[0]-this.b[0])**2 + (this.a[1]-this.b[1])**2));};
+        }
+
+        
+    </script>
+</body>
+</html>

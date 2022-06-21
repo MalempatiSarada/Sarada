@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(148, 227, 117);
+            color: brown;
+            font-size: 45px;
+            padding-top: 200px;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <script>
+        a=prompt("Enter the string to check palindrome:")
+        var pal = new Palindrome(a);
+        document.writeln("The string is ");
+        document.writeln(a);
+        if(pal.palindrome()){
+            document.writeln("is a palindrome");
+        }
+        else{
+            document.writeln("is not a palindrome");
+        }
+        function Palindrome(a){
+            this.str = a;
+            this.palindrome=function(){return (this.str==((this.str).split("").reverse().join("")));};
+        }
+    </script>
+</body>
+</html>

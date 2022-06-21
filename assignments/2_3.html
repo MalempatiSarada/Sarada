@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LengthArray</title>
+</head>
+<style>
+    body{
+        background-color: rgb(211, 208, 204);
+        font-size: 45px;
+        color:rgb(54, 80, 76);
+    }
+</style>
+<body>
+    <center>
+        <h1>Length Of An Array</h1>
+    
+    Enter Numbers:<input type="number" id="a" style="font-size: 30px;background-color: rgb(233, 195, 195);">
+    <button onclick="add()" style="background-color: rgb(166, 166, 72);font-size: 25px">Display Array</button>
+
+    <p id="b">Array : </p>
+    <button onclick="Finish()" style="background-color: rgb(182, 182, 87);font-size: 25px">Finish</button>
+    <p id="s">Length Of Array is : </p>
+    <script>
+        var i=0;
+        var na = Array();
+        
+        function add(){
+            document.getElementById("b").innerHTML='Array :';
+            na[i] = document.getElementById("a").value;
+            i++;
+            document.getElementById("a").value='';
+            document.getElementById("b").innerHTML += na;
+            
+        }
+        function Finish(){
+            document.getElementById("s").innerHTML += na.length;
+        }
+    </script>
+    </center>
+</body>
+</html>
