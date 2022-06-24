@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function move() {
+            const node = document.getElementById("List2").lastElementChild;
+            const list = document.getElementById("List1");
+            list.insertBefore(node, list.children[0]);
+        }
+    </script>
+    <style>
+        body{
+            font-size: 45px;
+            background-color: bisque;
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+<center>
+    
+    <h1>The insertBefore() Method</h1>
+
+    <ul id="List1" type="none">
+        <li>Dogs</li>
+        <li>Cats</li>
+    </ul>
+    <ul id="List2" type="none">
+        <li>Cows</li>
+        <li>Pandas</li>
+        <li>Fish</li>
+    </ul>
+
+    <p>Click the button to move items from one list to another:</p>
+
+    <button onclick="move()" style="font-size:45px ;background-color:chartreuse">Move</button>
+</center>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function move() {
+            const node = document.getElementById("List2").lastElementChild;
+            const list = document.getElementById("List1");
+            list.insertBefore(node, list.children[0]);
+        }
+    </script>
+    <style>
+        body{
+            font-size: 45px;
+            background-color: bisque;
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+<center>
+    
+    <h1>The insertBefore() Method</h1>
+
+    <ul id="List1" type="none">
+        <li>Dogs</li>
+        <li>Cats</li>
+    </ul>
+    <ul id="List2" type="none">
+        <li>Cows</li>
+        <li>Pandas</li>
+        <li>Fish</li>
+    </ul>
+
+    <p>Click the button to move items from one list to another:</p>
+
+    <button onclick="move()" style="font-size:45px ;background-color:chartreuse">Move</button>
+</center>
+</body>
+</html>
