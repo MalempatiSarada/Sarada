@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Forms</title>
+    </head>
+    <body>
+        <span>{{timestamp}}</span>
+        <h1>Name : {{name}}</h1>
+        <h1>Age : {{age}}</h1>
+        <h1>Skills : </h1>
+        <ul>
+        {{#skills}}
+        <li>
+        {{.}}
+        </li>
+        {{/skills}}
+        </ul>
+        <form action="/addprofile" method="POST">
+        <input type="text" name="username" placeholder="Name"/><br/>
+        <input type="text" name="name" placeholder="Username" /><br/>
+        <input type="text" name="age" placeholder="Age" /><br/>
+        <input type="text" name="skills" placeholder="Skills"/><br/>
+        <input type ="submit" value="Add Profile"/>
+        </form>
+
+    </body>
+
+</html>
